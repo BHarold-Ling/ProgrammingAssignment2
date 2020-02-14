@@ -29,7 +29,7 @@ makeCacheMatrix <- function(innerMatrix = matrix()) {
 cacheSolve <- function(x, ...) {
     inv = x$get.inv()
     if (is.null(inv)) {
-        inv = solve(x$get())
+        inv = solve(x$get(), ...)
         x$set.inv(inv)
     }
     inv
