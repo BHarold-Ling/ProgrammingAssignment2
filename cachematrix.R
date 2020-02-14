@@ -27,12 +27,12 @@ makeCacheMatrix <- function(innerMatrix = matrix()) {
 ## and returns the inverse.
 
 cacheSolve <- function(x, ...) {
-        inv = x$get.inv()
-        if (is.null(inv)) {
-            inv = solve(x$get())
-            x$set.inv(inv)
-        }
-        inv
+    inv = x$get.inv()
+    if (is.null(inv)) {
+        inv = solve(x$get())
+        x$set.inv(inv)
+    }
+    inv
 }
 
 
